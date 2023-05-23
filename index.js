@@ -27,9 +27,18 @@ async function run() {
     const toyCollection = client.db("fluffyFriends").collection("allToys");
 
     app.get("/allToys", async (req, res) => {
+      console.log(req.query);
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 20;
+      const skip = (page - 1) * limit;
       const cursor = toyCollection.find();
-      const result = await cursor.toArray();
+      const result = await cursor.skip(skip).limit(limit).toArray();
       res.send(result);
+    });
+
+    app.get('/totalToys', async(req, res) => {
+      const result = await toyCollection.estimatedDocumentCount();
+      res.send({totalToys: result});
     });
 
     app.get("/allToys/email/:email", async (req, res) => {
