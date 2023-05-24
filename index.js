@@ -40,11 +40,12 @@ async function run() {
       const result = await toyCollection.estimatedDocumentCount();
       res.send({totalToys: result});
     });
-
+    
     app.get("/allToys/email/:email", async (req, res) => {
       const email = req.params.email;
+      const sortOrder = req.query.sort === "descending" ? -1 : 1;
       const query = { sellerEmail: email };
-      const result = await toyCollection.find(query).toArray();
+      const result = await toyCollection.find(query).sort({ price: sortOrder }).toArray();
       res.send(result);
     });
 
@@ -60,6 +61,21 @@ async function run() {
       const result = await toyCollection.insertOne(newToy);
       res.send(result);
     });
+
+    app.patch('/allToys/id/:id', async(req, res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)};
+      const updatedToy = req.body;
+      const toy = {
+        $set: {
+          price: updatedToy.price,
+          availableQuantity: updatedToy.availableQuantity,
+          productDescription: updatedToy.productDescription
+        }
+      };
+      const result = await toyCollection.updateOne(query, toy);
+      res.send(result);
+    })
 
     app.delete('/allToys/id/:id', async(req, res) => {
       const id = req.params.id;
