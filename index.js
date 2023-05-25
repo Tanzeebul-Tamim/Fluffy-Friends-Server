@@ -26,11 +26,12 @@ async function run() {
     const toyCollection = client.db("fluffyFriends").collection("allToys");
 
     app.get("/allToys", async (req, res) => {
-      console.log(req.query);
+      const search = req.query.search;
+      const query = search ? { productName: { $regex: search, $options: 'i' } } : {};
       const page = parseInt(req.query.page) || 1;
       const limit = parseInt(req.query.limit) || 20;
       const skip = (page - 1) * limit;
-      const cursor = toyCollection.find();
+      const cursor = toyCollection.find(query);
       const result = await cursor.skip(skip).limit(limit).toArray();
       res.send(result);
     });
