@@ -12,7 +12,7 @@ Welcome to the server-side repository of Fluffy Friends, a soft toy marketplace.
 - [Live Server](#live-server)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
-- [Also checkout Toy-Marketplace-Client](#also-checkout-toy-marketplace-client)
+- [Also checkout Fluffy-Friends-Client](#also-checkout-fluffy-friends-client)
 - [Contributing](#contributing)
 
 ## Features
@@ -90,7 +90,7 @@ The server will be running on: https://toy-marketplace-server-puce-ten.vercel.ap
 - ***DELETE*** `/allToys/id/:id`: Delete a toy
 
 ## Also checkout Fluffy-Friends-Client
-Visit the client-side repository of the Fluffy Friends website - https://github.com/Tanzeebul-Tamim/Toy-Marketplace-Client
+Visit the client-side repository of the Fluffy Friends website - https://github.com/Tanzeebul-Tamim/Fluffy-Friends-Client
 ## Contributing
 
 Feel free to contribute by submitting a pull request. Please ensure that your code follows the project's coding standards and includes relevant tests.
