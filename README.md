@@ -48,8 +48,8 @@ Welcome to the server-side repository of Fluffy Friends, a soft toy marketplace.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Tanzeebul-Tamim/Toy-Marketplace-Server
-    cd fluffy-friends-server
+    git clone https://github.com/Tanzeebul-Tamim/Fluffy-Friends-Server
+    cd Fluffy-Friends-Server
     ```
 
 2. Install dependencies:
@@ -70,7 +70,7 @@ MONGODB_URI=your_mongodb_connection_string
 
 ## Live Server
 
-The server will be running on: https://toy-marketplace-server-puce-ten.vercel.app/
+The server is deployed on [this following URL](https://toy-marketplace-server-puce-ten.vercel.app/)
 
 ## Running the Application
 
@@ -90,7 +90,7 @@ The server will be running on: https://toy-marketplace-server-puce-ten.vercel.ap
 - ***DELETE*** `/allToys/id/:id`: Delete a toy
 
 ## Also checkout Fluffy-Friends-Client
-Visit the client-side repository of the Fluffy Friends website - https://github.com/Tanzeebul-Tamim/Fluffy-Friends-Client
+Visit the client-side repository of [Fluffy Friends](https://github.com/Tanzeebul-Tamim/Fluffy-Friends-Client) website
 ## Contributing
 
 Feel free to contribute by submitting a pull request. Please ensure that your code follows the project's coding standards and includes relevant tests.
