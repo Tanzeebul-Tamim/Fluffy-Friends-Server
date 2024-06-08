@@ -14,6 +14,7 @@ Welcome to the server-side repository of Fluffy Friends, a soft toy marketplace.
 - [API Endpoints](#api-endpoints)
 - [Also checkout Fluffy-Friends-Client](#also-checkout-fluffy-friends-client)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
