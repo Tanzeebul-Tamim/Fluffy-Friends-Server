@@ -1,4 +1,4 @@
-# Fluffy Friends - Server Side
+# <img src="https://github.com/Tanzeebul-Tamim/Fluffy-Friends-Client/blob/main/public/icon.png" alt="Logo" width="70"/> Fluffy Friends - Server Side
 
 Welcome to the server-side repository of Fluffy Friends, a soft toy marketplace. This server handles API requests and manages database functionalities.
 
